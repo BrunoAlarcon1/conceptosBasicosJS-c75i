@@ -9,8 +9,13 @@ if(condicion logica){
 
 const edad = parseInt(prompt('Ingrese su edad'));
 
-if(edad>=18){
+if(edad>=18 && edad<=70){
     document.write('Debe votar');
 }else{
+    if((edad>=16 && edad<18) || edad>70){
+        document.write('Es optativo votar')
+    }else{
     document.write('No debe votar');
+    }
 }
+ 
