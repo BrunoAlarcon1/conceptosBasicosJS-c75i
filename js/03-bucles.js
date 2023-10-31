@@ -32,3 +32,14 @@ do {
     contador+=1;
     
 } while (contador<=10);
+
+/* for(inicializar avriable;condicion logica;decrementar o incrementar variable){
+    todo el codigo uqe quiero ejecutar varias veces
+} */
+
+
+for(let cuentaRegresiva=10;cuentaRegresiva>0;cuentaRegresiva--){
+    document.write(`<p>Cuenta regresiva N: ${cuentaRegresiva} </p>`)
+   
+}
+
