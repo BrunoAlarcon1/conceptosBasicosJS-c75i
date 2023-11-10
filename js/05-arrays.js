@@ -61,3 +61,31 @@ for (let i = 0; i < peliculas.length; i++) {
 }
 document.write(`</ul>`);
 
+/* ELIMINAR ELEMENTOS DEL ARRAY  */
+
+peliculas.shift(); /* ELIMINAR EL PRIMER ELEMENTO DEL ARRAY */
+document.write(`<h2>Eliminamos el primer elemento del array (${peliculas.length})</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+  document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
+peliculas.splice(6,1)/* BORRAR ELEMENTOS DEL MEDIO DEL ARRAY */
+/*peliculas.splice(6,2);  */
+/* peliculas.splice(6); */
+document.write(`<h2>Eliminamos un elemento del array (${peliculas.length})</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+  document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
+peliculas.pop()/* BORRAR EL ULTIMO ELEMENTO DEL ARRAY */
+document.write(`<h2>Eliminamos el ultimo elemento del array (${peliculas.length})</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+  document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
