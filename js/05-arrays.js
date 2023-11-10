@@ -52,3 +52,12 @@ for (let i = 0; i < peliculas.length; i++) {
 }
 document.write(`</ul>`);
 
+/* MODIFICAR ELMENTOS DEL ARRAY */
+peliculas[6] = 'inception';
+document.write(`<h2>Lista de peliculas,modificamos el elemento de la posicion 6 del array (${peliculas.length})</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+  document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
