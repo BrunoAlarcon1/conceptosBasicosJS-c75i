@@ -36,6 +36,54 @@ class Pokemon {
     }
 
 }
+/* CLASES HIJO(HERENCIA) */
+class PokemonLegendario extends Pokemon{
+    #rareza; /* declaro metodos privados */
+    #ataqueEspecial;
+    constructor(nombreParam,tipoParam,pesoParam,alturaParam,evolucionParam,ataqueParam,numPokedexParam,fuerzaParam,rareza,ataqueEspecial){
+        super(nombreParam,tipoParam,pesoParam,alturaParam,evolucionParam,ataqueParam,numPokedexParam,fuerzaParam)
+        this.#rareza=rareza;
+        this.#ataqueEspecial=ataqueEspecial;
+    }
+    get rareza (){
+        return this.#rareza;
+    }
+    set rareza(nuevaRareza){
+        if(nuevaRareza,length>=3 && nuevaRareza,length<=10){
+        this.#rareza=nuevaRareza;
+        }else{
+            alert('Ingresaste un valor erroneo');
+        }
+    }
+    get ataqueEspecial (){
+        return this.#ataqueEspecial;
+    }
+    set ataqueEspecial(nuevoAtaqueEspecial){
+            this.#ataqueEspecial=nuevoAtaqueEspecial;
+    }
+
+    /* POLIMORFISMO CUANDO UN METODO YA CREADO UTILIZARLO PARA ALGO NUEVO */
+    mostrarDatos(){
+        document.write(`<h2>Pokemon ${this.nombre}</h2>
+        <ul>
+        <li>Num Pokemon: ${this.numPokedex}</li>
+        <li>Tipo: ${this.tipo}</li>
+        <li>Peso: ${this.peso}</li>
+        <li>Altura: ${this.altura}</li>
+        <li>Evolucion: ${this.evolucion}</li>
+        <li>Rareza: ${this.rareza}</li>
+        <li>Ataque Especial: ${this.ataqueEspecial}</li>
+
+
+        </ul>`)/* en this.rareza y ataque especial utilizo el getter  */
+
+
+    }
+
+
+}
+
+
 
 /* CREAR O INSTANCIAR UN OBJETO */
 
@@ -50,3 +98,7 @@ document.write(`<h2>Tipo : ${charmander.tipo}</h2>`);
 
 charmander.mostrarDatos();
 togepi.mostrarDatos();
+
+const mewtwo = new PokemonLegendario("Mewtwo","psiquico",122,2,[],['placaje','confusion'],150,7,'infrecuente',['charge bram','electro ball']);
+
+mewtwo.mostrarDatos();
