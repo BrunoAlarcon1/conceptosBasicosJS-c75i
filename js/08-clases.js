@@ -23,15 +23,30 @@ class Pokemon {
     }
 
     /* METODOS */
+    mostrarDatos(){
+        document.write(`<h2>Pokemon ${this.nombre}</h2>
+        <ul>
+        <li>Tipo: ${this.tipo}</li>
+        <li>Peso: ${this.peso}</li>
+        <li>Altura: ${this.altura}</li>
+        <li>Evolucion: ${this.evolucion}</li>
+        <li>Num Pokemon: ${this.numPokedex}</li>
+
+        </ul>`)
+    }
 
 }
 
 /* CREAR O INSTANCIAR UN OBJETO */
 
 const charmander = new Pokemon ('Charmander','fuego',15,1.20,['charmeleon','charizard'],['blaze','ascuas','lanzallamas'],4,4);
+const togepi= new Pokemon("Togepi","hada",1.5,0.3,["Togetic","Togekiss"],["gracias serena","dicha y estusiasmo","placaje"],175,15);
 
 console.log(charmander)
 document.write(`<h2>Pokemon : ${charmander.nombre}</h2>`);
 document.write(`<h2>Tipo : ${charmander.tipo}</h2>`);
 charmander.tipo = 'fuego 2';
 document.write(`<h2>Tipo : ${charmander.tipo}</h2>`);
+
+charmander.mostrarDatos();
+togepi.mostrarDatos();
